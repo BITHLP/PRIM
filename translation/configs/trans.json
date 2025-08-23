@@ -1,0 +1,43 @@
+{
+    "data":{
+        "train_lmdb_path": ["/data2/yztian/MTedIIMT/subset_en_de_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_fr_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_cs_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_ru_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_ro_lmdb/train"],
+        "train_code_file_path": ["/data2/yztian/vistrans_codes/train.de", "/data2/yztian/vistrans_codes/train.fr", "/data2/yztian/vistrans_codes/train.cs", "/data2/yztian/vistrans_codes/train.ru", "/data2/yztian/vistrans_codes/train.ro"],
+        "val_lmdb_path": ["/data2/yztian/MTedIIMT/subset_en_de_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_fr_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_cs_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_ru_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_ro_lmdb/val"],
+        "val_code_file_path": ["/data2/yztian/vistrans_codes/val.de", "/data2/yztian/vistrans_codes/val.fr", "/data2/yztian/vistrans_codes/val.cs", "/data2/yztian/vistrans_codes/val.ru", "/data2/yztian/vistrans_codes/val.ro"],
+        "spm_path": "/data1/yztian/ACL2025/VisTrans/multilingual_spm/total-35kbpe.model",
+        "subspm_path": "/data1/yztian/ACL2025/VisTrans/multilingual_spm/total-char.model",
+        "max_text_len": 42,
+        "max_subtext_len": 96,
+        "src_language_tags": ["<en>", "<en>", "<en>", "<en>", "<en>"],
+        "tgt_language_tags": ["<de>", "<fr>", "<cs>", "<ru>", "<ro>"]
+    },
+    "train":{
+        "wandb_name": "IIMT2025",
+        "wandb_mode": "online",
+        "save_checkpoint_dir": "/data1/yztian/ACL2025/VisTrans_models/trans",
+        "batch_size": 352,
+        "warmup_steps": 5000,
+        "warmup_init_lr": 1e-5,  
+        "max_lr": 5e-4,
+        "epoch": -1,
+        "max_update_step": 50000,
+        "note": "",
+        "vision_config": "/data1/yztian/ACL2025/VisTrans_models/vision/vision.json",
+        "vision_ckpt": "/data1/yztian/ACL2025/VisTrans_models/vision/checkpoint_best0.59790.pt",
+        "gradient_accumulation_steps": 4
+    },
+    "model":{
+        "code_bos": 8192,
+        "code_eos": 8193,
+        "code_num": 8194,
+        "d_model": 512,
+        "d_ff": 2048,
+        "n_head": 8,
+        "l": 6,
+        "dropout": 0.1,
+        "sub_subword_d_ff": 2048,
+        "sub_subword_l": 3,
+        "group_size": 2
+    }
+}
+

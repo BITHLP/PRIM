@@ -1,0 +1,47 @@
+{
+    "data":{
+        "train_lmdb_path": ["/data2/yztian/MTedIIMT/subset_en_de_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_fr_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_cs_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_ru_lmdb/train", "/data2/yztian/MTedIIMT/subset_en_ro_lmdb/train"],
+        "val_lmdb_path": ["/data2/yztian/MTedIIMT/subset_en_de_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_fr_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_cs_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_ru_lmdb/val", "/data2/yztian/MTedIIMT/subset_en_ro_lmdb/val"],
+        "spm_path": "/data1/yztian/ACL2025/VisTrans/multilingual_spm/total-35kbpe.model",
+        "src_language_tags": ["<en>", "<en>", "<en>", "<en>", "<en>"],
+        "tgt_language_tags": ["<de>", "<fr>", "<cs>", "<ru>", "<ro>"],
+        "max_text_len": 42
+    },
+    "train":{
+        "wandb_name": "IIMT2025",
+        "wandb_mode": "online",
+        "save_checkpoint_dir": "/data1/yztian/ACL2025/VisTrans_models/vision",
+        "batch_size": 48,
+        "warmup_steps": 5000,
+        "warmup_init_lr": 1e-5,  
+        "max_lr":5e-4,
+        "epoch": -1,
+        "max_update_step": 50000,
+        "note": "en->de/fr/cs/ru/ro vision model",
+        "gradient_accumulation_steps": 2
+    },
+    "model":{
+        "img_h": 32,
+        "img_w": 512,
+        "back_patch": 16,
+        "back_dim": 512,
+        "back_l": 6,
+        "back_head": 8,
+        "code_patch": 16,
+        "code_dim": 512,
+        "code_l": 6,
+        "code_head": 8,
+        "codebook_dim": 32,
+        "codebook_size": 8192,
+        "img_dim": 512,
+        "img_l": 6,
+        "img_head": 8,
+        "img_patch": 16,
+        "mt_d_model": 512,
+        "mt_d_ff": 2048,
+        "mt_n_head": 8,
+        "mt_l": 6,
+        "mt_dropout": 0.1,
+        "mt_patch": 8
+    }
+}

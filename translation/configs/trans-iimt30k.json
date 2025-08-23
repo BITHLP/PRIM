@@ -1,0 +1,43 @@
+{
+    "data":{
+        "train_lmdb_path": ["/data2/yztian/IIMT30k_train_deen", "/data2/yztian/IIMT30k_train_ende"],
+        "train_code_file_path": ["/data2/yztian/VisTrans_codes_IIMT30k/train.deen", "/data2/yztian/VisTrans_codes_IIMT30k/train.ende"],
+        "val_lmdb_path": ["/data2/yztian/IIMT30k_val_deen", "/data2/yztian/IIMT30k_val_ende"],
+        "val_code_file_path": ["/data2/yztian/VisTrans_codes_IIMT30k/val.deen", "/data2/yztian/VisTrans_codes_IIMT30k/val.ende"],
+        "spm_path": "/data1/yztian/VisTrans/iimt30k_spm/total-10kbpe.model",
+        "subspm_path": "/data1/yztian/VisTrans/iimt30k_spm/total-char.model",
+        "max_text_len": 42,
+        "max_subtext_len": 108,
+        "src_language_tags": ["<de>", "<en>"],
+        "tgt_language_tags": ["<en>", "<de>"]
+    },
+    "train":{
+        "wandb_name": "iimt30k_vistrans",
+        "wandb_mode": "offline",
+        "save_checkpoint_dir": "/data1/yztian/ACL2025/VisTrans_models_IIMT30k/trans",
+        "batch_size": 424,
+        "warmup_steps": 5000,
+        "warmup_init_lr": 5e-5,  
+        "max_lr": 1e-3,
+        "epoch": -1,
+        "max_update_step": 50000,
+        "note": "",
+        "vision_config": "/data1/yztian/ACL2025/VisTrans_models_IIMT30k/vision/vision-iimt30k.json",
+        "vision_ckpt": "/data1/yztian/ACL2025/VisTrans_models_IIMT30k/vision/checkpoint_best0.65922.pt",
+        "gradient_accumulation_steps": 4
+    },
+    "model":{
+        "code_bos": 8192,
+        "code_eos": 8193,
+        "code_num": 8194,
+        "d_model": 512,
+        "d_ff": 2048,
+        "n_head": 8,
+        "l": 6,
+        "dropout": 0.1,
+        "sub_subword_d_ff": 2048,
+        "sub_subword_l": 3,
+        "group_size": 2
+    }
+}
+

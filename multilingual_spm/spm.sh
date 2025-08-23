@@ -1,0 +1,3 @@
+cat /data1/yztian/MTedIIMT/subset_en_de_lmdb/text/train.de /data1/yztian/MTedIIMT/subset_en_fr_lmdb/text/train.fr /data1/yztian/MTedIIMT/subset_en_fr_lmdb/text/train.en /data1/yztian/MTedIIMT/subset_en_cs_lmdb/text/train.cs /data1/yztian/MTedIIMT/subset_en_ru_lmdb/text/train.ru /data1/yztian/MTedIIMT/subset_en_ro_lmdb/text/train.ro > /data1/yztian/train.total
+spm_train --unk_id=0 --bos_id=-1 --eos_id=1 --eos_piece "<eos>" --pad_id=2 --input=/data1/yztian/train.total --model_prefix=total-35kbpe --vocab_size=35000 --model_type=bpe --user_defined_symbols "<en>","<de>","<fr>","<cs>","<ru>","<ro>"
+spm_train --unk_id=0 --bos_id=1 --eos_id=2 --bos_piece "<bos>" --eos_piece "<eos>" --pad_id=3 --input=/data1/yztian/train.total --model_prefix=total-char --model_type=char
