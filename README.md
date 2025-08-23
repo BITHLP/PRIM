@@ -7,7 +7,7 @@ Official repository of PRIM: Towards Practical In-Image Multilingual Machine Tra
 ## 📂 Dataset
 
 * **PRIM Test Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-PRIM-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/PRIM)
-* **Training Set**: [Download here](link)
+* **Training Set**: TODO.
 
 After downloading, you can check images in the dataset with `./dataset/check_lmdb.ipynb`
 
@@ -18,7 +18,7 @@ We also provide:
 
 ## 🚀 Training
 
-PRIM training involves **two stages**. Training logs are recorded via **[Weights & Biases](https://wandb.ai/)**.
+VisTrans training involves **two stages**. Training logs are recorded via **[Weights & Biases](https://wandb.ai/)**.
 
 <p align="center">
   <img src="./img/train.png" alt="train" width="600"/>
