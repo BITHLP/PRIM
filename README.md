@@ -2,14 +2,14 @@
 
 Official repository of PRIM: Towards Practical In-Image Multilingual Machine Translation (EMNLP 2025 Main).
 
-<p align="center"> <img src="./img/model.png" alt="model" width="600"/> </p>
+<p align="center"> <img src="./img/model.png" alt="model" width="700"/> </p>
 
 ## 📂 Dataset
 
 * **PRIM Test Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-PRIM-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/PRIM)
-* **Training Set**: TODO.
+* **Training Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-MTedIIMT-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/MTedIIMT).
 
-After downloading, you can check images in the dataset with `./dataset/check_lmdb.ipynb`
+After downloading, you can check images in the training set with `./dataset/check_lmdb.ipynb`
 
 We also provide:
 
@@ -21,7 +21,7 @@ We also provide:
 VisTrans training involves **two stages**. Training logs are recorded via **[Weights & Biases](https://wandb.ai/)**.
 
 <p align="center">
-  <img src="./img/train.png" alt="train" width="600"/>
+  <img src="./img/train.png" alt="train" width="700"/>
 </p>
 
 **Stage 1️⃣ Vision**
