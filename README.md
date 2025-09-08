@@ -1,13 +1,14 @@
 # PRIM
 
 Official repository of PRIM: Towards Practical In-Image Multilingual Machine Translation (EMNLP 2025 Main).
+[![arXiv](https://img.shields.io/badge/arXiv-2509.05146-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.05146)
 
 <p align="center"> <img src="./img/model.png" alt="model" width="700"/> </p>
 
 ## 📂 Dataset
 
 * **PRIM Test Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-PRIM-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/PRIM)
-* **Training Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-MTedIIMT-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/MTedIIMT).
+* **Training Set**: [![HuggingFace](https://img.shields.io/badge/HuggingFace-MTedIIMT-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/yztian/MTedIIMT)
 
 After downloading, you can check images in the training set with `./dataset/check_lmdb.ipynb`
 
@@ -73,7 +74,7 @@ cd ./translation/script
 bash wandb_train.sh
 ```
 
-# 🔍 Inference
+## 🔍 Inference
 
 We provide ready-to-use scripts:
 
