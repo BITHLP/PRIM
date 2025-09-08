@@ -76,6 +76,8 @@ bash wandb_train.sh
 
 ## 🔍 Inference
 
+We have released our trained model at [![HuggingFace](https://img.shields.io/badge/HuggingFace-VisTrans-ffd700?logo=huggingface&logoColor=yellow)](https://huggingface.co/yztian/VisTrans)
+
 We provide ready-to-use scripts:
 
 * PRIM test set: `./infer_prim.sh`
@@ -94,3 +96,19 @@ Evaluation consists of:
 The example of evaluation commands are shown in `eval_prim.sh` and `eval_iimt30k.sh`.
 
 Make sure to update paths before running.
+
+## 📖 Citation
+
+If you find our work helpful, we would greatly appreciate it if you could cite our paper:
+
+```bibtex
+@misc{tian2025primpracticalinimagemultilingual,
+      title={PRIM: Towards Practical In-Image Multilingual Machine Translation}, 
+      author={Yanzhi Tian and Zeming Liu and Zhengyang Liu and Chong Feng and Xin Li and Heyan Huang and Yuhang Guo},
+      year={2025},
+      eprint={2509.05146},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.05146}, 
+}
+```
